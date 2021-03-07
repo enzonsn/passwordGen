@@ -20,10 +20,10 @@ function generatePassword(length, upper, lower, nums, sp){
   var pass = "";
   for(var i = 1; i <= length; i++){
     var rand = Math.floor(Math.random()*93)+33;
-    if(nums && rand >= 48 && rand <=57){pass+= String.fromCharCode(rand); console.log("Num: "+String.fromCharCode(rand));}
-    else if(upper && rand >= 65 && rand <= 90){pass+= String.fromCharCode(rand); console.log("Upp: "+String.fromCharCode(rand));}
-    else if(lower && rand >= 97 && rand <= 122){pass+= String.fromCharCode(rand); console.log("Low: "+ String.fromCharCode(rand));}
-    else if(sp && (rand == 95 || rand == 33 || (rand >=35 && rand <=38) || rand == 63 || rand == 94)){pass+= String.fromCharCode(rand); console.log("Sp: "+ String.fromCharCode(rand));}
+    if(nums && rand >= 48 && rand <=57){pass+= String.fromCharCode(rand);}
+    else if(upper && rand >= 65 && rand <= 90){pass+= String.fromCharCode(rand);}
+    else if(lower && rand >= 97 && rand <= 122){pass+= String.fromCharCode(rand);}
+    else if(sp && (rand == 95 || rand == 33 || (rand >=35 && rand <=38) || rand == 63 || rand == 94)){pass+= String.fromCharCode(rand);}
     else{i--;}
   }
   return pass;
